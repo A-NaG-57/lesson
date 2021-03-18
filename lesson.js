@@ -14,13 +14,11 @@ function removeAllChildren(element) {
 
 function start_function(){
    startTime = Date.now();
-  return;
 }
 
 function stop_function(){
   currentTime = Date.now();
   seconds = (currentTime - startTime);
-  return;
 }
 
 //topicの内容
