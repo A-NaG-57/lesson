@@ -37,6 +37,7 @@ const answers = [
 startButton.onclick = () => {
    startTime = Date.now();
 //DO:ルーレット回してる風の何か
+  return;
 }
 
 //STOPボタン作成
@@ -44,6 +45,7 @@ stopButton.onclick = () => {
     currentTime = Date.now();
     seconds = (currentTime - startTime);
 //DO:ルーレット回してる風の何かを止める
+  return;
 }
 
 //結果表示エリア作成
