@@ -42,9 +42,6 @@ const answers = [
     '生まれ変わったら何になりたい？'
 ];
 
-document.getElementById("start_button").onclick = start_function();
-document.getElementById("stop_button").onclick = stop_function();
-
 //結果表示エリア作成
 if(startTime === null){
   const paragraph = document.createElement('p');
