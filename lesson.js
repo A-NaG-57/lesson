@@ -38,7 +38,7 @@ startButton.onclick = start_function(){
    startTime = Date.now();
   alert(スタートしました);
   return;
-}
+};
 
 //STOPボタン作成
 stopButton.onclick = stop_function(){
@@ -46,7 +46,7 @@ stopButton.onclick = stop_function(){
   seconds = (currentTime - startTime);
   alert(ストップしました);
   return;
-}
+};
 
 //結果表示エリア作成
 if(startTime === null){
