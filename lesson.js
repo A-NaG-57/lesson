@@ -1,5 +1,5 @@
-const startButton = document.getElementById('start');
-const stopButton = document.getElementById('stop');
+const startButton = document.getElementById('start_button');
+const stopButton = document.getElementById('stop_button');
 const resultDivided = document.getElementById('result-area');
 var startTime = null;
 var seconds = 0;
