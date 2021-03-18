@@ -12,6 +12,19 @@ function removeAllChildren(element) {
   }
 }
 
+function start_function(){
+   startTime = Date.now();
+  alert(スタートしました);
+  return;
+}
+
+function stop_function(){
+  currentTime = Date.now();
+  seconds = (currentTime - startTime);
+  alert(ストップしました);
+  return;
+}
+
 //topicの内容
 const answers = [
     '好きな食べ物は？',
@@ -34,19 +47,10 @@ const answers = [
 ];
 
 //STARTボタン
-startButton.onclick = start_function(){
-   startTime = Date.now();
-  alert(スタートしました);
-  return;
-};
+startButton.onclick = start_function();
 
 //STOPボタン作成
-stopButton.onclick = stop_function(){
-  currentTime = Date.now();
-  seconds = (currentTime - startTime);
-  alert(ストップしました);
-  return;
-};
+stopButton.onclick = stop_function();
 
 //結果表示エリア作成
 if(startTime === null){
