@@ -2,13 +2,20 @@ const startButton = document.getElementById('start');
 const stopButton = document.getElementById('stop');
 const resultDivided = document.getElementById('result-area');
 
+function removeAllChildren(element) {
+  while (element.firstChild) {
+    // 子どもの要素があるかぎり削除
+    element.removeChild(element.firstChild);
+  }
+}
+
 //STARTボタン
 startButton.onclick = () => {
     var startTime = Date.now();
 //DO:ルーレット回してる風の何か
 }
 
-//DO:STOPボタン作成
+//STOPボタン作成
 stopButton.onclick = () => {
     var currentTime = Date.now();
     var seconds = (currentTime - startTime) / 1000;
