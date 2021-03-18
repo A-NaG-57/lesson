@@ -74,12 +74,8 @@ function roulette(seconds) {
 }
 
 //テスト
-/*
 console.assert(
-    assessment('太郎') === '太郎のいいところはユニークさです。太郎だけのその特徴が皆を楽しくさせます。',
-    '診断結果の文言の特定の部分を名前に置き換える処理が正しくありません。'
+    startTime !== null,
+    'ルーレットが正常にスタートしました。'
 );
-console.assert(
-    assessment('太郎') === assessment('太郎'),
-    '入力名が同じ場合に同じ診断結果を出力する処理が正しくありません。'
-);*/
+
