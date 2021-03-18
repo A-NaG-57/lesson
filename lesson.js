@@ -1,9 +1,9 @@
 const startButton = document.getElementById('start');
 const stopButton = document.getElementById('stop');
 const resultDivided = document.getElementById('result-area');
-var startTime;
-var seconds;
-
+var startTime = null;
+var seconds = 0;
+var currentTime = 0;
 
 function removeAllChildren(element) {
   while (element.firstChild) {
@@ -41,21 +41,28 @@ startButton.onclick = () => {
 
 //STOPボタン作成
 stopButton.onclick = () => {
-    var currentTime = Date.now();
+    currentTime = Date.now();
     seconds = (currentTime - startTime);
 //DO:ルーレット回してる風の何かを止める
 }
 
 //結果表示エリア作成
-removeAllChildren(resultDivided);
-const header = document.createElement('h3');
-header.innerText = '今回の話題';
-resultDivided.appendChild(header);
-
-const paragraph = document.createElement('p');
-const result = roulette(seconds);
-paragraph.innerText = result;
-resultDivided.appendChild(paragraph);
+if(startTime === null){
+  const paragraph = document.createElement('p');
+  paragraph.innerText = 'スタートボタンでルーレットを回してね';
+  }else if(startTime > currentTime){
+    const paragraph = document.createElement('p');
+    paragraph.innerText = 'ストップボタンでルーレットを止めてね';
+  }else{
+    removeAllChildren(resultDivided);
+    const header = document.createElement('h3');
+    header.innerText = '今回の話題';
+    resultDivided.appendChild(header);
+    const paragraph = document.createElement('p');
+    const result = roulette(seconds);
+    paragraph.innerText = result;
+    resultDivided.appendChild(paragraph);
+  }
 
 //ルーレットの結果を判定
 function roulette(seconds) {
