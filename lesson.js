@@ -36,16 +36,14 @@ const answers = [
 //STARTボタン
 startButton.onclick = () => {
    startTime = Date.now();
-//DO:ルーレット回してる風の何か
   alert(スタートしました);
   return;
 }
 
 //STOPボタン作成
 stopButton.onclick = () => {
-    currentTime = Date.now();
-    seconds = (currentTime - startTime);
-//DO:ルーレット回してる風の何かを止める
+  currentTime = Date.now();
+  seconds = (currentTime - startTime);
   alert(ストップしました);
   return;
 }
