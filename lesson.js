@@ -1,5 +1,3 @@
-const startButton = document.getElementById('start_button');
-const stopButton = document.getElementById('stop_button');
 const resultDivided = document.getElementById('result-area');
 var startTime = null;
 var seconds = 0;
@@ -44,11 +42,8 @@ const answers = [
     '生まれ変わったら何になりたい？'
 ];
 
-//STARTボタン
-startButton.onclick = start_function();
-
-//STOPボタン作成
-stopButton.onclick = stop_function();
+document.getElementById("start_button").onclick = start_function();
+document.getElementById("stop_button").onclick = stop_function();
 
 //結果表示エリア作成
 if(startTime === null){
