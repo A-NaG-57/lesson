@@ -34,14 +34,14 @@ const answers = [
 ];
 
 //STARTボタン
-startButton.onclick = () => {
+startButton.onclick = start_function(){
    startTime = Date.now();
   alert(スタートしました);
   return;
 }
 
 //STOPボタン作成
-stopButton.onclick = () => {
+stopButton.onclick = stop_function(){
   currentTime = Date.now();
   seconds = (currentTime - startTime);
   alert(ストップしました);
