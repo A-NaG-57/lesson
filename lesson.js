@@ -43,6 +43,7 @@ const answers = [
 ];
 
 //結果表示エリア作成
+while(true){
 if(startTime === null){
   const paragraph = document.createElement('p');
   paragraph.innerText = 'スタートボタンでルーレットを回してね';
@@ -59,6 +60,7 @@ if(startTime === null){
     paragraph.innerText = result;
     resultDivided.appendChild(paragraph);
   }
+}
 
 //ルーレットの結果を判定
 function roulette(seconds) {
@@ -68,8 +70,7 @@ function roulette(seconds) {
 }
 
 //テスト
-console.assert(
-    startTime !== null,
-    'ルーレットが正常にスタートしました。'
-);
+if(startTime !== null){
+  console.log('ルーレットが正常にスタートしました。');
+}
 
