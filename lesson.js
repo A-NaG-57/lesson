@@ -1,8 +1,8 @@
 const startButton = document.getElementById('start');
 const stopButton = document.getElementById('stop');
 const resultDivided = document.getElementById('result-area');
-var startTime = 0;
-var seconds = 0;
+var startTime;
+var seconds;
 
 function removeAllChildren(element) {
   while (element.firstChild) {
