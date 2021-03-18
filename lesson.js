@@ -2,6 +2,7 @@ const startButton = document.getElementById('start');
 const stopButton = document.getElementById('stop');
 const resultDivided = document.getElementById('result-area');
 var startTime = 0;
+var seconds = 0;
 
 function removeAllChildren(element) {
   while (element.firstChild) {
@@ -19,7 +20,7 @@ startButton.onclick = () => {
 //STOPボタン作成
 stopButton.onclick = () => {
     var currentTime = Date.now();
-    var seconds = (currentTime - startTime) / 1000;
+    seconds = (currentTime - startTime) / 1000;
 //DO:ルーレット回してる風の何かを止める
 }
 
