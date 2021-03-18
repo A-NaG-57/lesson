@@ -4,6 +4,7 @@ const resultDivided = document.getElementById('result-area');
 var startTime;
 var seconds;
 
+
 function removeAllChildren(element) {
   while (element.firstChild) {
     // 子どもの要素があるかぎり削除
@@ -41,7 +42,7 @@ startButton.onclick = () => {
 //STOPボタン作成
 stopButton.onclick = () => {
     var currentTime = Date.now();
-    seconds = (currentTime - startTime) / 1000;
+    seconds = (currentTime - startTime);
 //DO:ルーレット回してる風の何かを止める
 }
 
