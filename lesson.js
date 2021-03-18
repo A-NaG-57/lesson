@@ -1,6 +1,7 @@
 const startButton = document.getElementById('start');
 const stopButton = document.getElementById('stop');
 const resultDivided = document.getElementById('result-area');
+var startTime = 0;
 
 function removeAllChildren(element) {
   while (element.firstChild) {
@@ -11,7 +12,7 @@ function removeAllChildren(element) {
 
 //STARTボタン
 startButton.onclick = () => {
-    var startTime = Date.now();
+   startTime = Date.now();
 //DO:ルーレット回してる風の何か
 }
 
