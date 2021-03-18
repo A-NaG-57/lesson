@@ -14,14 +14,12 @@ function removeAllChildren(element) {
 
 function start_function(){
    startTime = Date.now();
-  alert('スタートしました');
   return;
 }
 
 function stop_function(){
   currentTime = Date.now();
   seconds = (currentTime - startTime);
-  alert('ストップしました');
   return;
 }
 
