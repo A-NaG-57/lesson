@@ -1,4 +1,6 @@
 const resultDivided = document.getElementById('result-area');
+const resultDivided = document.getElementById('start_button');
+const resultDivided = document.getElementById('stop_button');
 var startTime = null;
 var seconds = 0;
 var currentTime = 0;
