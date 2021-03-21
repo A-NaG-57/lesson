@@ -25,17 +25,9 @@ function stop_function(){
   console.log("stop");
   console.log(currentTime);
   console.log(seconds);
-  removeAllChildren(resultDivided);
-    const header = document.createElement('h3');
-    header.innerText = '今回の話題';
-    resultDivided.appendChild(header);
-    const paragraph = document.createElement('p');
-    const result = roulette(seconds);
-    paragraph.innerText = result;
-    resultDivided.appendChild(paragraph);
 }
 stopButton.onclick = stop_function;
-/*
+
 //topicの内容
 const answers = [
     '好きな食べ物は？',
@@ -56,7 +48,7 @@ const answers = [
     '休日の過ごし方を紹介！',
     '生まれ変わったら何になりたい？'
 ];
-
+/*
 //結果表示エリア作成
 while(true){
 if(startTime === null){
@@ -65,18 +57,25 @@ if(startTime === null){
   }else if(startTime > currentTime){
     const paragraph = document.createElement('p');
     paragraph.innerText = 'ストップボタンでルーレットを止めてね';
-  }else{
-    
-  }
+  }else{*/
+    removeAllChildren(resultDivided);
+    const header = document.createElement('h3');
+    header.innerText = '今回の話題';
+    resultDivided.appendChild(header);
+    const paragraph = document.createElement('p');
+    const result = roulette(seconds);
+    paragraph.innerText = result;
+    resultDivided.appendChild(paragraph);
+/*  }
 }
-
+*/
 //ルーレットの結果を判定
 function roulette(seconds) {
     const index = seconds % answers.length;
     let result = answers[index];
     return result;
 }
-*/
+
 //テスト
 if(startTime !== null){
   console.log('ルーレットが正常にスタートしました。');
