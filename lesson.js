@@ -1,6 +1,6 @@
 const resultDivided = document.getElementById('result-area');
-const resultDivided = document.getElementById('start_button');
-const resultDivided = document.getElementById('stop_button');
+const start_button = document.getElementById('start_button');
+const stop_button = document.getElementById('stop_button');
 var startTime = null;
 var seconds = 0;
 var currentTime = 0;
@@ -16,7 +16,6 @@ function start_function(){
    startTime = Date.now();
   console.log("start");
 }
-const start_button = document.getElementById('start_button');
 start_button.onclick = start_function;
 
 function stop_function(){
@@ -24,7 +23,6 @@ function stop_function(){
   seconds = (currentTime - startTime);
   console.log("stop");
 }
-const stop_button = document.getElementById('stop_button');
 stop_button.onclick = stop_function;
 
 //topicの内容
