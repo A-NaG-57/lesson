@@ -25,6 +25,14 @@ function stop_function(){
   console.log("stop");
   console.log(currentTime);
   console.log(seconds);
+  removeAllChildren(resultDivided);
+    const header = document.createElement('h3');
+    header.innerText = '今回の話題';
+    resultDivided.appendChild(header);
+    const paragraph = document.createElement('p');
+    const result = roulette(seconds);
+    paragraph.innerText = result;
+    resultDivided.appendChild(paragraph);
 }
 stopButton.onclick = stop_function;
 /*
@@ -58,14 +66,7 @@ if(startTime === null){
     const paragraph = document.createElement('p');
     paragraph.innerText = 'ストップボタンでルーレットを止めてね';
   }else{
-    removeAllChildren(resultDivided);
-    const header = document.createElement('h3');
-    header.innerText = '今回の話題';
-    resultDivided.appendChild(header);
-    const paragraph = document.createElement('p');
-    const result = roulette(seconds);
-    paragraph.innerText = result;
-    resultDivided.appendChild(paragraph);
+    
   }
 }
 
