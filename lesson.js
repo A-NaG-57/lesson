@@ -5,6 +5,9 @@ var startTime = null;
 var seconds = 0;
 var currentTime = 0;
 
+const paragraph = document.createElement('p');
+paragraph.innerText = 'スタートボタンでルーレットを回してね';
+
 function removeAllChildren(element) {
   while (element.firstChild) {
     // 子どもの要素があるかぎり削除
@@ -16,6 +19,8 @@ function start_function(){
    startTime = Date.now();
   console.log("start");
   console.log(startTime);
+  const paragraph = document.createElement('p');
+  paragraph.innerText = 'ストップボタンでルーレットを止めてね';
 }
 startButton.onclick = start_function;
 
@@ -25,6 +30,15 @@ function stop_function(){
   console.log("stop");
   console.log(currentTime);
   console.log(seconds);
+  
+  removeAllChildren(resultDivided);
+  const header = document.createElement('h3');
+  header.innerText = '今回の話題';
+  resultDivided.appendChild(header);
+  const paragraph = document.createElement('p');
+  const result = roulette(seconds);
+  paragraph.innerText = result;
+  resultDivided.appendChild(paragraph);
 }
 stopButton.onclick = stop_function;
 
@@ -48,27 +62,7 @@ const answers = [
     '休日の過ごし方を紹介！',
     '生まれ変わったら何になりたい？'
 ];
-/*
-//結果表示エリア作成
-while(true){
-if(startTime === null){
-  const paragraph = document.createElement('p');
-  paragraph.innerText = 'スタートボタンでルーレットを回してね';
-  }else if(startTime > currentTime){
-    const paragraph = document.createElement('p');
-    paragraph.innerText = 'ストップボタンでルーレットを止めてね';
-  }else{*/
-    removeAllChildren(resultDivided);
-    const header = document.createElement('h3');
-    header.innerText = '今回の話題';
-    resultDivided.appendChild(header);
-    const paragraph = document.createElement('p');
-    const result = roulette(seconds);
-    paragraph.innerText = result;
-    resultDivided.appendChild(paragraph);
-/*  }
-}
-*/
+
 //ルーレットの結果を判定
 function roulette(seconds) {
     const index = seconds % answers.length;
