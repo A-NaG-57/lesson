@@ -1,12 +1,10 @@
+const rouletteDivided = document.getElementById('roulette-area');
 const resultDivided = document.getElementById('result-area');
 const startButton = document.getElementById('start_button');
 const stopButton = document.getElementById('stop_button');
 var startTime = null;
 var seconds = 0;
 var currentTime = 0;
-
-const paragraph = document.createElement('p');
-paragraph.innerText = 'スタートボタンでルーレットを回してね';
 
 function removeAllChildren(element) {
   while (element.firstChild) {
@@ -15,14 +13,24 @@ function removeAllChildren(element) {
   }
 }
 
+while(true){
+  removeAllChildren(rouletteDivided);
+  const paragraph = document.createElement('p');
+  paragraph.innerText = 'スタートボタンでルーレットを回してね';
+  rouletteDivided.appendChild(paragraph);
+  
+  if(startTime > currentTime){
+    removeAllChildren(rouletteDivided);
+    const paragraph = document.createElement('p');
+    paragraph.innerText = 'ストップボタンでルーレットを止めてね';
+    rouletteDivided.appendChild(paragraph);
+    }
+}
+     
 function start_function(){
    startTime = Date.now();
   console.log("start");
   console.log(startTime);
-  
-  removeAllChildren(resultDivided);
-  const paragraph = document.createElement('p');
-  paragraph.innerText = 'ストップボタンでルーレットを止めてね';
 }
 startButton.onclick = start_function;
 
@@ -70,10 +78,5 @@ function roulette(seconds) {
     const index = seconds % answers.length;
     let result = answers[index];
     return result;
-}
-
-//テスト
-if(startTime !== null){
-  console.log('ルーレットが正常にスタートしました。');
 }
 
