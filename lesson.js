@@ -1,6 +1,6 @@
 const resultDivided = document.getElementById('result-area');
-const start_button = document.getElementById('start_button');
-const stop_button = document.getElementById('stop_button');
+const startButton = document.getElementById('start_button');
+const stopButton = document.getElementById('stop_button');
 var startTime = null;
 var seconds = 0;
 var currentTime = 0;
@@ -15,15 +15,16 @@ function removeAllChildren(element) {
 function start_function(){
    startTime = Date.now();
   console.log("start");
+  console.log(startTime);
 }
-start_button.onclick = start_function;
-
+startButton.onclick = start_function;
+/*
 function stop_function(){
   currentTime = Date.now();
   seconds = (currentTime - startTime);
   console.log("stop");
 }
-stop_button.onclick = stop_function;
+stopButton.onclick = stop_function;
 
 //topicの内容
 const answers = [
@@ -72,7 +73,7 @@ function roulette(seconds) {
     let result = answers[index];
     return result;
 }
-
+*/
 //テスト
 if(startTime !== null){
   console.log('ルーレットが正常にスタートしました。');
