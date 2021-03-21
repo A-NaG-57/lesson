@@ -19,6 +19,8 @@ function start_function(){
    startTime = Date.now();
   console.log("start");
   console.log(startTime);
+  
+  removeAllChildren(resultDivided);
   const paragraph = document.createElement('p');
   paragraph.innerText = 'ストップボタンでルーレットを止めてね';
 }
