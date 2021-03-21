@@ -18,14 +18,16 @@ function start_function(){
   console.log(startTime);
 }
 startButton.onclick = start_function;
-/*
+
 function stop_function(){
   currentTime = Date.now();
   seconds = (currentTime - startTime);
   console.log("stop");
+  console.log(currentTime);
+  console.log(seconds);
 }
 stopButton.onclick = stop_function;
-
+/*
 //topicの内容
 const answers = [
     '好きな食べ物は？',
