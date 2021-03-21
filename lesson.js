@@ -16,12 +16,16 @@ function start_function(){
    startTime = Date.now();
   console.log("start");
 }
+const start_button = document.getElementById('start_button');
+start_button.onclick = start_function;
 
 function stop_function(){
   currentTime = Date.now();
   seconds = (currentTime - startTime);
   console.log("stop");
 }
+const stop_button = document.getElementById('stop_button');
+stop_button.onclick = stop_function;
 
 //topicの内容
 const answers = [
