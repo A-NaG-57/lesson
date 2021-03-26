@@ -4,8 +4,6 @@ const startButton = document.getElementById('start_button');
 const stopButton = document.getElementById('stop_button');
 const startTime = null;
 const seconds = 0;
-const currentTime = 0;
-const condition = true;
 
 function removeAllChildren(element) {
   while (element.firstChild) {
@@ -13,23 +11,13 @@ function removeAllChildren(element) {
     element.removeChild(element.firstChild);
   }
 }
-
-while(condition){
-  if(startTime > currentTime){
-    removeAllChildren(rouletteDivided);
-    const paragraph = document.createElement('p');
-    paragraph.innerText = 'ストップボタンでルーレットを止めてね';
-    rouletteDivided.appendChild(paragraph);
-    }else{
-      removeAllChildren(rouletteDivided);
-      const paragraph = document.createElement('p');
-      paragraph.innerText = 'スタートボタンでルーレットを回してね';
-      rouletteDivided.appendChild(paragraph);
-    }
-}
-     
+    
 function start_function(){
-   startTime = Date.now();
+  startTime = Date.now();
+  removeAllChildren(rouletteDivided);
+  const paragraph = document.createElement('p');
+  paragraph.innerText = 'ルーレットが回っています。ストップボタンでルーレットを止めてね';
+  rouletteDivided.appendChild(paragraph);
   console.log("start");
   console.log(startTime);
 }
