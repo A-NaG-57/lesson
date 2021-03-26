@@ -2,9 +2,10 @@ const rouletteDivided = document.getElementById('roulette-area');
 const resultDivided = document.getElementById('result-area');
 const startButton = document.getElementById('start_button');
 const stopButton = document.getElementById('stop_button');
-var startTime = null;
-var seconds = 0;
-var currentTime = 0;
+const startTime = null;
+const seconds = 0;
+const currentTime = 0;
+const condition = true;
 
 function removeAllChildren(element) {
   while (element.firstChild) {
@@ -13,7 +14,7 @@ function removeAllChildren(element) {
   }
 }
 
-while(true){
+while(condition){
   if(startTime > currentTime){
     removeAllChildren(rouletteDivided);
     const paragraph = document.createElement('p');
