@@ -26,6 +26,7 @@ startButton.onclick = start_function;
 function stop_function(){
   currentTime = Date.now();
   seconds = (currentTime - startTime);
+  removeAllChildren(rouletteDivided);
   console.log("stop");
   console.log(currentTime);
   console.log(seconds);
