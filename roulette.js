@@ -13,7 +13,7 @@ function removeAllChildren(element) {
   }
 }
 
-while(true){
+/*while(true){
   removeAllChildren(rouletteDivided);
   const paragraph = document.createElement('p');
   paragraph.innerText = 'スタートボタンでルーレットを回してね';
@@ -25,7 +25,7 @@ while(true){
     paragraph.innerText = 'ストップボタンでルーレットを止めてね';
     rouletteDivided.appendChild(paragraph);
     }
-}
+}*/
      
 function start_function(){
    startTime = Date.now();
