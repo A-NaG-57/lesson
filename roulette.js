@@ -2,8 +2,8 @@ const rouletteDivided = document.getElementById('roulette-area');
 const resultDivided = document.getElementById('result-area');
 const startButton = document.getElementById('start_button');
 const stopButton = document.getElementById('stop_button');
-const startTime = null;
-const seconds = 0;
+let startTime = null;
+let seconds = 0;
 
 function removeAllChildren(element) {
   while (element.firstChild) {
