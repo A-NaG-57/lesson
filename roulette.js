@@ -14,16 +14,16 @@ function removeAllChildren(element) {
 }
 
 while(true){
-  removeAllChildren(rouletteDivided);
-  const paragraph = document.createElement('p');
-  paragraph.innerText = 'スタートボタンでルーレットを回してね';
-  rouletteDivided.appendChild(paragraph);
-  
   if(startTime > currentTime){
     removeAllChildren(rouletteDivided);
     const paragraph = document.createElement('p');
     paragraph.innerText = 'ストップボタンでルーレットを止めてね';
     rouletteDivided.appendChild(paragraph);
+    }else{
+      removeAllChildren(rouletteDivided);
+      const paragraph = document.createElement('p');
+      paragraph.innerText = 'スタートボタンでルーレットを回してね';
+      rouletteDivided.appendChild(paragraph);
     }
 }
      
