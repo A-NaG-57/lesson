@@ -14,6 +14,7 @@ function removeAllChildren(element) {
     
 function start_function(){
   startTime = Date.now();
+  removeAllChildren(resultDivided);
   removeAllChildren(rouletteDivided);
   const paragraph = document.createElement('p');
   paragraph.innerText = 'ルーレットが回っています。ストップボタンでルーレットを止めてね';
